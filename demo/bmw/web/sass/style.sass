@@ -1,0 +1,354 @@
+@import reset
+@font-face
+  font-family: "BMWTypeNextLatin-Light"
+  src: url("../images/BMWTypeNextLatin-Light.ttf") format("truetype")
+
+@import url("//fonts.googleapis.com/earlyaccess/notosanstc.css")
+
+body
+  color: white
+  font-weight: 400
+  background: black url('../images/bg.jpg') center no-repeat fixed
+  background-size: cover
+  letter-spacing: 1px
+  font-size: 16px
+.progress
+  background: #000
+  height: 100%
+  position: fixed
+  width: 100%
+  z-index: 9999999999
+  top: 0
+  overflow: hidden
+  &.dispear
+    opacity: 0
+    visibility: hidden
+    transform: scale(1.1)
+    transition: .5s
+.loading
+  width: 305px
+  height: 40px
+  margin: 0 auto
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+#wrap
+  position: relative
+  width: 640px
+  height: auto
+  display: block
+  margin: auto
+  font-size: 18px
+  line-height: 32px
+  overflow: hidden
+#index
+  width: 640px
+  height: 1085px
+  position: relative
+  overflow: hidden
+  background: black
+  text-align: center
+  .kv
+    width: 640px
+    height: 1085px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%) scale(1.2)
+    opacity: .6
+    pointer-events: none
+    img
+      position: absolute
+      top: 0
+      left: 0
+      &.light
+        animation: light 10s linear infinite
+    &.active
+      transform: translate(-50%,-50%) scale(1)
+      opacity: 1
+      transition: 3s ease-out
+  .logo
+    position: absolute
+    width: 276px
+    top: 50px
+    left: 182px
+    p
+      font-size: 20px
+      text-align: center
+      border-top: 1px solid white
+      border-bottom: 1px solid white
+  .tittle
+    font-size: 62px
+    font-weight: 300
+    position: absolute
+    letter-spacing: 5px
+    word-break: keep-all;
+  .t1
+    left: 0px
+    top: 290px
+    opacity: 0
+    &.active
+      left: 115px
+      opacity: 1
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.47, 1.93)
+  .t2
+    top: 370px
+    left: 440px
+    opacity: 0
+    &.active
+      left: 270px
+      opacity: 1
+      transition: all 1s cubic-bezier(0.25, 0.1, 0.47, 1.93)
+  .tittle2
+    position: absolute
+    letter-spacing: 1px
+    text-align: left
+    left: 45px
+    top: 855px
+    width: 555px
+    span
+      display: block
+      margin-bottom: 20px
+      line-height: 1em
+      left: -40px
+      opacity: 0
+      position: relative
+    .t3
+      font-size: 22px
+    .t4
+      font-size: 46px
+      letter-spacing: 0
+      text-transform: uppercase
+    .t5
+      font-size: 32px
+    .arrow
+      width: 10px
+      height: 100px
+      position: absolute
+      right: 0
+      bottom: 70px
+      border-left: 2px solid white
+      cursor: pointer
+      opacity: 0
+      animation: arrow 2s linear infinite
+      &::after
+        content: ""
+        width: 10px
+        height: 10px
+        background: url('../images/arrow.png') center no-repeat
+        background-size: cover
+        display: block
+        position: absolute
+        bottom: -2px
+        right: 0
+    &.active
+      .t3
+        left: 0
+        opacity: 1
+        transition: all .5s ease-out 1.5s
+      .t4
+        left: 0
+        opacity: 1
+        transition: all .5s ease-out 1.75s
+      .t5
+        left: 0
+        opacity: 1
+        transition: all .5s ease-out 2s
+      .arrow
+        bottom: 20px
+        opacity: 1
+        transition: all .2s ease-out 2.25s
+#bottom
+  width: 640px
+  height: 875px
+  position: relative
+  text-align: center
+  padding: 65px 0
+  color: black
+  background: url('../images/bottom.jpg') center top
+  h3
+    font-size: 26px
+    text-align: center
+    font-weight: normal
+    margin-bottom: 45px
+    span
+      font-size: 12px
+      color: #ad3131
+      margin-left: 1em
+.form_wrap
+  width: 450px
+  height: auto
+  display: block
+  overflow: hidden
+  margin: auto
+  ul
+    margin-bottom: 45px
+    li
+      margin-bottom: 10px
+      position: relative
+      width: 100%
+      padding-top: 20px
+input
+  border: none
+  box-shadow: none
+  border-radius: 0
+  text-shadow: none
+.form__field
+  font-family: inherit
+  width: 100%
+  border: 0
+  border-bottom: 1px solid black
+  outline: 0
+  font-size: 24px
+  color: black
+  padding: 7px 0
+  background: transparent
+  transition: border-color 0.2s
+  &::placeholder
+    color: transparent
+  &:placeholder-shown ~ .form__label
+    font-size: 24px
+    cursor: text
+    top: 20px
+    color: black
+.form__label
+  position: absolute
+  top: 0px
+  display: block
+  transition: 0.2s
+  font-size: 12px
+  color: black
+  span
+      color: #ad3131
+      font-size: 16px
+      position: relative
+      top: -10px
+.form__field:focus
+  font-size: 24px
+  & ~ .form__label
+    position: absolute
+    top: 0
+    display: block
+    transition: 0.2s
+    font-size: 1rem
+    color: #999
+    span
+      position: relative
+      top: 0px
+/* reset input */
+.form__field
+  &:required,&:invalid
+    box-shadow: none
+
+
+.radios
+  font-size: 16px
+  line-height: 30px
+  color: #000
+  margin: 15px 0
+  font-family: 微軟正黑體, Arial ,sans-serif
+  text-align: left
+  padding-left: 40px
+  margin-bottom: 40px
+input[type="checkbox"]
+  display: none
+  & + label
+    display: inline-block
+    width: 30px
+    text-align: left
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    color: #fff
+    cursor: pointer
+    position: relative
+    margin-left: -40px
+    margin-right: 5px
+  & + label::before
+    content: ""
+    display: inline-block
+    width: 30px
+    height: 30px
+    background: #fff
+    vertical-align: middle
+    box-sizing: border-box
+    border: 1px #000 solid
+    transition: background ease-in .5s
+  & + label::after
+    content: ""
+    display: inline-block
+    top: 6px
+    left: 10px
+    box-sizing: border-box
+    width: 10px
+    height: 15px
+    transform: rotate(45deg)
+    border-style: solid
+    border-color: #fff
+    border-top: 0
+    border-left: 0
+    position: absolute
+  &:checked + label::after
+    border-color: #000
+
+.enter
+  width: 100%
+  height: 80px
+  text-align: center
+  cursor: pointer
+  overflow: hidden
+  background: grey url('../images/btn.jpg') center
+  border: 1px solid white
+  overflow: hidden
+  position: relative
+  margin-bottom: 40px
+  box-shadow: rgba(50,50,93,0.45) 0px -20px 46px -32px, rgba(0,0,0,0.3) 0px 38px 26px -28px
+  transition: all .3s ease
+  p
+    font-size: 24px
+    line-height: 78px
+    letter-spacing: 1px
+    text-align: center
+    transition: all .3s ease
+  &:hover
+    box-shadow: rgba(50,50,93,0.25) 0px -10px 46px -32px, rgba(0,0,0,0.15) 0px 29px 33px -28px
+    transition: all .3s ease
+    p
+      font-size: 22px
+      letter-spacing: 2px
+      transition: all .3s ease
+footer
+  width: 100%
+  display: block
+  font-size: 14px
+  color: #999999
+  text-align: center
+
+@keyframes light
+  0%
+    opacity: 0
+  10%
+    opacity: 0
+  15%
+    opacity: 1
+  25%
+    opacity: 1
+  30%
+    opacity: 0
+  40%
+    opacity: 0
+  43%
+    opacity: 1
+  48%
+    opacity: 1
+  50%
+    opacity: 0
+  to
+    opacity: 0
+@keyframes arrow
+  0%
+    transform: translateY(-10px)
+  50%
+    transform: translateY(0px)
+  100%
+    transform: translateY(-10px)

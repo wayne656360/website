@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document*/
+/* CSS reset*/
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, textarea, p, blockquote, th, td, footer, img {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ol, ul {
+  list-style: none; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym, img {
+  border: 0; }
+
+/* link styles*/
+a, div, li {
+  text-decoration: none; }
+
+a:hover, div:hover, li:hover {
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+/* ----------------------------------------------------
+ 	clearfix
+ */
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
+  display: inline-block; }
+
+html[xmlns] .clearfix {
+  display: block; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  * html .clearfix {
+    height: 1%; }
+
+html {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  width: 100%;
+  background: #fff;
+  letter-spacing: 1px; }
+
+body {
+  width: 100%;
+  background: #fff;
+  font-family: "Noto Serif TC","繁黑體",'Roboto Slab',serif;
+  letter-spacing: 1px;
+  color: #333;
+  font-size: 15px; }
+
+img {
+  max-width: 100%;
+  height: auto; }

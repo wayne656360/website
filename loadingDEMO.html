@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>無標題文件</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet" type="text/css">
+<style>
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+.start-screen {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    text-align: center;
+    -webkit-transform: none!important;
+    -ms-transform: none!important;
+    transform: none!important
+}
+.loader {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.loading {
+    color: #f17c7f;
+    font-size: 0;
+    position: relative
+}
+
+.loading__element {
+    display: inline-block;
+    font: normal 200 2rem/1 Roboto;
+    letter-spacing: .5em;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    position: relative;
+    height: 100%
+}
+
+.loading__element span {
+    display: block;
+    -webkit-animation: bouncing 2s infinite ease;
+    animation: bouncing 2s infinite ease
+}
+
+.el1 span {
+    -webkit-animation-delay: .11111s;
+    animation-delay: .11111s
+}
+
+.el2 span {
+    -webkit-animation-delay: .22222s;
+    animation-delay: .22222s
+}
+
+.el3 span {
+    -webkit-animation-delay: .33333s;
+    animation-delay: .33333s
+}
+
+.el4 span {
+    -webkit-animation-delay: .44444s;
+    animation-delay: .44444s
+}
+
+.el5 span {
+    -webkit-animation-delay: .55556s;
+    animation-delay: .55556s
+}
+
+.el6 span {
+    -webkit-animation-delay: .66667s;
+    animation-delay: .66667s
+}
+
+.el7 span {
+    -webkit-animation-delay: .77778s;
+    animation-delay: .77778s
+}
+
+.el8 span {
+    -webkit-animation-delay: .88889s;
+    animation-delay: .88889s
+}
+
+.el9 span {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+@-webkit-keyframes bouncing {
+    0%,100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+}
+
+@keyframes bouncing {
+    0%,100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="start-screen js-loader" ">
+      <div class="loader">
+        <div class="loading">
+          <div class="loading__element el1"><span>P</span></div>
+          <div class="loading__element el2"><span>A</span></div>
+          <div class="loading__element el3"><span>G</span></div>
+          <div class="loading__element el4"><span>E</span></div>
+        </div>
+        <div class="loading">
+          <div class="loading__element el1"><span>L</span></div>
+          <div class="loading__element el2"><span>O</span></div>
+          <div class="loading__element el3"><span>A</span></div>
+          <div class="loading__element el4"><span>D</span></div>
+          <div class="loading__element el5"><span>I</span></div>
+          <div class="loading__element el6"><span>N</span></div>
+          <div class="loading__element el7"><span>G</span></div>
+          <div class="loading__element el8"><span>S</span></div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

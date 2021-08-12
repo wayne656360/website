@@ -1,0 +1,779 @@
+@import reset
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url("//fonts.googleapis.com/earlyaccess/notosanstc.css")
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+TC:400,700')
+
+$colors: (red: #bc302c)
+@function color($color-name)
+  @return map-get($colors, $color-name)
+::selection
+  color: white
+  background: color(red)
+img
+  line-height: 0
+.buynow
+  position: fixed
+  bottom: 10px
+  right: 10px
+  z-index: 800
+  .buynow_clsoe
+    position: relative
+    top: -255px
+    left: 125px
+    width: 21px
+    height: 21px
+    z-index: 801
+.mobileShow
+  display: none
+.progress
+  background: white
+  height: 100%
+  position: fixed
+  width: 100%
+  z-index: 9999999999
+  top: 0
+  &.dispear
+    opacity: 0
+    visibility: hidden
+    transform: scale(1.1)
+.loading
+  width: 320px
+  height: 178px
+  margin: 0 auto
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+body,html
+  color: white
+  width: 100%
+  font-size: 16px
+  line-height: 1.5em
+  letter-spacing: 1px
+  background: black
+.wrap
+  width: 100%
+  min-width: 1200px
+nav
+  background: black
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: 800
+  left: -100%
+  transition: all 1s ease
+  &.open
+    left: 0
+    transition: all 1s ease
+  .nav_logo
+    width: auto
+    height: 100vh
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    opacity: .1
+  ul
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    li
+      font-size: 1.35rem
+      line-height: 1em
+      margin-bottom: 2rem
+      text-align: center
+      letter-spacing: 0
+      font-weight: bold
+      &.hk
+        font-size: 1rem
+        img
+          width: 1rem
+          margin-right: .5em
+        &::before
+          content: ""
+          width: 100%
+          height: 2px
+          background: color(red)
+          margin: 1.5rem 0
+          display: block
+      a
+        color: white
+        transition: color .3s ease
+        &.hk
+          font-size: 1rem
+        &:hover
+          color: color(red)
+          transition: color .3s ease
+        span
+          display: block
+          margin: auto
+          font-size: 1rem
+          color: color(red)
+
+header
+  min-height: 100vh
+  position: relative
+  .changevidoeWrap
+    position: absolute
+    left: 50%
+    bottom: 30px
+    transform: translateX(-50%)
+    display: flex
+    & > div
+      text-align: center
+      border: 2px white solid
+      display: flex
+      justify-items: center
+      align-items: center
+      margin: 0 10px
+      cursor: pointer
+      background: rgba(0,0,0,.3)
+      padding-left: 1px
+      box-shadow: 2px 2px 5px rgba(0,0,0,.3)
+      padding: 10px 20px
+      &:hover
+        background: rgba(0,0,0,1)
+      &.active
+        border: 2px color(red) solid
+        background: rgba(255,0,0,.3)
+        &:hover
+          background: color(red)
+      p
+        width: fit-content
+        margin: auto
+  .mobileVideo
+    position: absolute
+    width: 640px
+    height: 360px
+    top: 50%
+    left: 0px
+    transform: translateY(-230px)
+  &.page
+    min-height: 0
+    height: 0
+  .sound
+    width: 45px
+    height: 45px
+    position: absolute
+    z-index: 5
+    background: url('../images/mute.png') center
+    background-size: cover
+    bottom: 20px
+    left: 20px
+    cursor: pointer
+    &.unMute
+      background: url('../images/sound.png') center
+      background-size: cover
+  .scroll_btn
+    cursor: pointer
+    position: absolute
+    bottom:  30px
+    right: 30px
+    .scroll_arw
+      width: 15px
+    &::after
+      content: ""
+      width: 21px
+      height: 21px
+      border: white 1px solid
+      border-radius: 50%
+      display: block
+      position: absolute
+      top: -10px
+      left: -4px
+      animation: scrollbtn 1s ease infinite alternate
+  .menu_logo
+    position: fixed
+    top: 20px
+    left: 20px
+    width: 160px
+    z-index: 999
+  .nav_btn
+    position: fixed
+    top: 20px
+    right: 20px
+    display: flex
+    cursor: pointer
+    z-index: 999
+    &:hover
+      span
+        color: color(red)
+        transition: all .5s ease
+      .nav_icon
+        transform: rotate(225deg)
+        transition: all .5s ease
+        &::before,&::after
+          background: white
+    &.open
+      span
+        &::before
+          content: "CLOSE"
+      .nav_icon
+        transform: rotate(225deg)
+        transition: all .5s ease
+      .nav_icon
+    span
+      line-height: 50px
+      margin-right: 10px
+      transition: all .5s ease
+      &::before
+          content: "MENU"
+    .nav_icon
+      width: 50px
+      height: 50px
+      display: block
+      position: relative
+      transition: all .5s ease
+      &::before
+        width: 1px
+        height: 50px
+        content: ""
+        background: color(red)
+        display: block
+        position: absolute
+        left: 50%
+      &::after
+        width: 50px
+        height: 1px
+        content: ""
+        background: color(red)
+        display: block
+        position: absolute
+        top: 50%
+@keyframes scrollbtn
+    0%
+      transform: scale(1)
+    to
+      transform: scale(1.3)
+main
+  width: 100%
+  min-width: 1200px
+  margin: auto
+  background: black
+.about
+  background: #000
+  padding: 140px 10vw
+  display: flex
+  width: 100%
+  margin: auto
+  align-items: center
+  .about_logo
+    width: 43%
+  .about_txt
+    width: 57%
+    padding-left: 8vw
+    text-align: justify
+    h1
+      font-size: 1.3rem
+      text-align: left
+      margin-bottom: .25em
+      &::after
+        display: none
+    h2
+      font-size: 1rem
+      text-align: left
+      color: white
+      margin-bottom: 1rem
+      span
+        color: color(red)
+    p
+      font-size: 1rem
+      line-height: 1.5em
+      span
+        display: block
+        color: color(red)
+        margin-top: 1rem
+    ul
+      margin-bottom: 1.5rem
+      li
+        display: flex
+        line-height: 1.5rem
+        margin-bottom: 1rem
+        .item_desc
+          margin-left: 1rem
+          border-left: white 5px solid
+          padding-left: 1rem
+          span
+            color: color(red)
+.redline
+  width: 100%
+  height: 10px
+  background: color(red)
+  margin: 1.5rem 0
+.linkBtn
+  text-align: center
+  background: color(red)
+  color: white
+  font-size: 1rem
+  padding: 1rem 3rem
+  display: block
+  width: fit-content
+  transition: all .5s ease
+  &:hover
+    background: white
+    color: color(red)
+    transition: all .5s ease
+    span
+      background: color(red)
+      color: white
+  span
+    background: white
+    color: color(red)
+    font-size: .5rem
+    display: block
+    padding: 0 5px
+    line-height: 2em
+    letter-spacing: 0
+h1
+  color: color(red)
+  text-align: center
+  font-size: 72px
+  line-height: 1em
+  &::after
+    width: 350px
+    height: 10px
+    content: ""
+    display: block
+    background: color(red)
+    margin: 40px auto 60px
+.whatson
+  padding-bottom: 140px
+  .whatWrap
+    max-width: 1400px
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    padding: 0 20px
+    .whatitem
+      padding: 0 20px
+      margin-bottom: 40px
+      width: 50%
+      picture
+        line-height: 0
+        display: block
+        border-left: 10px color(red) solid
+        border-bottom: 10px color(red) solid
+        position: relative
+        &::after
+          width: 100%
+          height: 100%
+          background: color(red)
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          mix-blend-mode: multiply
+          opacity: 0
+          transition: all .5s ease
+        img
+          transition: all .5s ease
+        h2
+          position: absolute
+          z-index: 10
+          color: white
+          font-size: 2.7rem
+          bottom: 20px
+          left: 30px
+          line-height: 1em
+          text-shadow: 3px 2px 2px rgba(0,0,0,.43);
+          span
+            display: block
+            font-size: 1.7rem
+            color: color(red)
+      &:hover
+        picture
+          border-left: 10px white solid
+          border-bottom: 10px white solid
+          transition: all .5s ease
+          &::after
+            opacity: 1
+            transition: all .5s ease
+          img
+            opacity: .8
+            transition: all .5s ease
+.sponsor
+  padding-bottom: 140px
+  .sponsorWrap
+    max-width: 1400px
+    width: 95%
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    .sponsorItem
+      width: 25%
+      padding: 0 1.25%
+      .sponsorItemWrap
+        border: 1px #333 solid
+        padding: 15px
+        margin-bottom: 2.5vw
+        picture
+          width: 100%
+          img
+            width: 100%
+        h2
+          font-size: 1.5rem
+          color: color(red)
+          padding: 15px 0
+        p
+          padding-bottom: 30px
+        .linkBtn
+          margin: 0 auto 10px
+          font-size: 1rem
+footer
+  text-align: center
+  background: #333333
+  padding: 50px 0
+  img
+    margin-bottom: 1rem
+  span
+    display: block
+    margin: auto
+article
+  padding-top: 140px
+  h1::after
+    display: none
+  h2
+    text-align: center
+    color: white
+    font-size: 2rem
+    line-height: 1.3em
+    margin-bottom: 40px
+  p.desc
+    max-width: 1000px
+    margin: auto
+    text-align: center
+  .faqWrap
+    width: 95%
+    margin: auto
+    max-width: 1000px
+    padding: 0 20px 140px
+    .faqEn
+      padding-top: .3em
+    ul
+      li
+        margin-bottom: 1em
+        &.answer
+          padding-left: 2em
+          &::before
+            content: "答："
+            display: inline-block
+            margin-left: -2em
+            vertical-align: top
+        &.question
+          color: color(red)
+          font-weight: bold
+          margin-bottom: 1em
+          padding-left: 2em
+          &::before
+            content: "問："
+            display: inline-block
+            margin-left: -2em
+            vertical-align: top
+          &.noask
+            padding-left: 0
+            &::before
+              display: none
+          a
+            color: white
+            text-decoration: underline
+        ol
+          width: calc(100% - 1em)
+          display: inline-block
+          li
+            margin-bottom: 1em
+            margin-left: 1em
+            list-style: decimal
+            a
+              color: color(red)
+.introWrap
+  width: 100%
+  padding: 120px 0
+  position: relative
+  .pagearea
+    width: 50%
+    height: 110px
+    position: absolute
+    top: 120px
+    left: 50%
+    display: flex
+    justify-content: space-between
+    z-index: 20
+    padding: 0 7.5%
+    .next,.prev
+      cursor: pointer
+      display: flex
+      justify-content: center
+      outline: none
+      svg
+        width: 50px
+        .st0
+          fill: color(red)
+      &:hover
+        fill: white
+    .next svg
+      transform: rotateY(180deg)
+    .swiper-pagination
+      font-size: 5rem
+      font-weight: bold
+      line-height: 1em
+      -webkit-text-stroke: 1.5px color(red)
+      text-stroke: 1.5px color(red)
+      text-fill-color: transparent
+      color: transparent
+      pointer-events: none
+      .swiper-pagination-current
+        margin-left: .25em
+      .swiper-pagination-total
+        font-size: 2.5rem
+        &::before
+          content: " / "
+      &.chief
+        &::before
+          content: "Chef"
+          font-size: 2.5rem
+      &.dj
+        &::before
+          content: "Rising Star"
+          font-size: 2.5rem
+      &.wine
+        &::before
+          content: "Mixologist"
+          font-size: 2.5rem
+  .swiper-slide
+    display: flex
+    flex-wrap: wrap
+    background: black
+    align-items: stretch
+    .photo
+      width: 50%
+      line-height: 0
+    .introtxt
+      width: 50%
+      padding: 110px 7.5% 0
+      align-self: center
+      &.pt0
+        padding-top: 0
+      .titleWrap
+        width: 100%
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        margin-bottom: 2rem
+        .linkBtn
+          padding: 1rem 2rem
+          font-size: 12px
+      h3
+        border-left: 10px color(red) solid
+        font-size: 3.5rem
+        padding-left: 10px
+        small
+          font-size: 1rem
+          margin-left: .5rem
+          color: grey
+        span
+          color: color(red)
+          font-size: 1.5rem
+          font-weight: normal
+          line-height: 1em
+          display: block
+          margin-bottom: 1.75rem
+        &.one
+          line-height: 1em
+          span
+            margin-bottom: 1rem
+      p
+        text-align: justify
+        margin-bottom: 2rem
+.twovideo
+  display: flex
+.videoWrap
+  width: 50%
+  position: relative
+  cursor: pointer
+  padding: 0 2%
+  img
+    border: gray 1px solid
+  &::after
+   content: ""
+   width: 46px
+   height: 50px
+   background: url('../images/play.png')
+   background-size: cover
+   position: absolute
+   top: 50%
+   left: 50%
+   transform: translate(-50%,-50%)
+   display: block
+   transition: all .3s ease
+  &:hover
+    &::after
+      background: url('../images/play_hover.png')
+      background-size: cover
+      transition: all .3s ease
+.videocoming
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  padding: 0 5%
+  &::after
+    display: flex
+    justify-content: center
+    align-items: center
+    content: "Coming Soon!"
+    background: rgba(0,0,0,.65)
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(0%,0%)
+    font-weight: bold
+    color: color(red)
+    font-size: 3rem
+    font-style: italic
+#videoPop
+  width: 100%
+  height: 100%
+  position: fixed
+  background: black
+  top: 0
+  left: 0
+  z-index: 9999999
+  visibility: hidden
+  opacity: 0
+  &.active
+    visibility: visible
+    opacity: 1
+  .inner
+    width: 100%
+    max-width: 1200px
+    height: auto
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    .player
+      position: relative
+      padding-bottom: 56.25%
+      height: 0
+      overflow: hidden
+      iframe,object,embed
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+.pop-close
+  width: 50px
+  height: 50px
+  display: block
+  position: fixed
+  top: 20px
+  right: 20px
+  cursor: pointer
+  transform: rotate(45deg)
+  &::before
+    width: 1px
+    height: 50px
+    content: ""
+    background: color(red)
+    display: block
+    position: absolute
+    left: 24px
+  &::after
+    width: 50px
+    height: 1px
+    content: ""
+    background: color(red)
+    display: block
+    position: absolute
+    top: 24px
+@media screen and (max-width: 640px)
+  body,html
+    font-size: 20px
+  header
+    height: 950px
+    min-height: inherit
+    background: black url('../images/header_bg.jpg') top center no-repeat
+    .changevidoeWrap
+      transform: none
+      left: 20px
+      bottom: 100px
+    .menu_logo
+      width: 90px
+    .scroll_btn
+      bottom: 100px
+    .sound
+      width: 35px
+      height: 35px
+      bottom: 360px
+      left: 20px
+  .mobileShow
+    display: block
+  .mobileHide
+    display: none
+  .wrap,main
+    width: 100%
+    min-width: unset
+  .linkBtn span
+    font-size: .5em
+  .about
+    flex-wrap: wrap
+    .about_logo
+      width: 100%
+      padding-left: 0px
+      padding-right: 0px
+      padding-bottom: 75px
+    .about_txt
+      width: 100%
+      padding-left: 2vw
+      padding-right: 2vw
+      .item
+        width: 100px
+      .item_desc
+        width: calc(100% - 100px)
+        text-align: left
+  .whatson
+    .whatWrap
+      .whatitem
+        width: 100%
+        picture
+          h2
+            font-size: 2rem
+            span
+              font-size: 1.5rem
+  .sponsor
+    .sponsorWrap
+      .sponsorItem
+        width: 50%
+  h1
+    font-size: 3rem
+  article
+    padding-top: 150px
+    p.desc
+      width: 80%
+      margin: auto
+      br
+        display: none
+  .introWrap
+    .pagearea
+      position: relative
+      top: 0
+      left: 0
+      width: 100%
+      text-align: center
+    .swiper-slide
+      .photo
+        width: 100%
+        padding: 0 5%
+      .introtxt
+        width: 100%
+        padding: 2rem 5%  0
+        .titleWrap
+          margin-top: 2rem
+          .linkBtn
+            height: 70px
+            font-size: 14px

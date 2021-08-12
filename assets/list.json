@@ -1,0 +1,182 @@
+ [
+	{
+		"photo": "30",
+		"title": "GQ瀟灑地酒",
+		"script": "網頁設計",
+		"url": ""
+	},
+	{
+		"photo": "29",
+		"title": "Off Menu | Tatler Taiwan",
+		"script": "PC/手機網頁",
+		"url": "http://www.waynedesign.url.tw/demo/web/"
+	},
+	{
+		"photo": "28",
+		"title": "marieclaire 官網",
+		"script": "UI/UX",
+		"url": "https://marieclaire.com.tw/"
+	},
+	{
+		"photo": "27",
+		"title": "2019 金馬影展",
+		"script": "PC/手機網頁",
+		"url": "https://www.marieclaire.com.tw/events/2019/goldenhorse/"
+	},
+ 	{
+		"photo":"26",
+		"title":"2019 裙襬澎澎RUN",
+		"script":"PC/手機網頁",
+        "url": "https://www.marieclaire.com.tw/events/2019/07/pinkrun/"
+	},
+ 	{
+		"photo":"25",
+		"title":"第二屆決戰禮服伸展台",
+		"script":"PC/手機網頁",
+        "url": "https://www.marieclaire.com.tw/events/2019/03/TaipeiCityMarry/"
+	},
+ 	{
+		"photo":"24",
+		"title":"2018 金馬影展",
+		"script":"PC/手機網頁",
+        "url": "https://marieclaire.com.tw/events/2018/goldenhorse/"
+	},
+ 	{
+		"photo":"23",
+		"title":"2018 美麗佳人國際美妝大獎",
+		"script":"RWD網頁",
+        "url": "https://www.marieclaire.com.tw/events/beauty-prizes/2018/"
+	},
+ 	{
+		"photo":"22",
+		"title":"美麗佳人25週年慶",
+		"script":"PC/手機網頁",
+        "url": "https://www.marieclaire.com.tw/events/2018/03/25th-anniversary/"
+	},
+	{
+		"photo":"21",
+		"title":"麗寶集團",
+		"script":"官網提案",
+        "url": ""
+	},
+ 	{
+		"photo":"20",
+		"title":"MINIS競速挑戰賽",
+		"script":"手機遊戲網頁",
+        "url": "http://m.fisherprice.com.tw/mini-thomas-challenge/"
+	},
+	{
+		"photo":"19",
+		"title":"friDay影線資訊入口規劃",
+		"script":"PC/手機網頁",
+        "url": ""
+	},
+	{
+		"photo":"18",
+		"title":"H:CONNENT",
+		"script":"手機網頁",
+        "url": "https://m.hconnect.com/tw/"
+	},
+	{
+		"photo":"17",
+		"title":"Haagen Daz",
+		"script":"中秋提案",
+        "url": ""
+	},
+	{
+		"photo":"1",
+		"title":"COSEME DECORTE",
+		"script":"黛珂雙天后",
+        "url": " http://event.elle.com.tw/event/2015/cosmedecorte03/"
+	},
+	{
+		"photo":"2",
+		"title":"2015 Cartier",
+		"script":"2月活動提案",
+        "url": "http://event.elle.com.tw/event/2015/cartier02/index.php"
+    },
+	{
+		"photo":"4",
+		"title":"2015 Cartier",
+		"script":"7月活動提案",
+        "url": ""
+    },
+    {
+		"photo":"3",
+		"title":"MAYBELLINE",
+		"script":"夢幻粉底液",
+        "url": "http://elle.maybelline.com.tw/dreamliquid2015/"
+    },
+    {
+		"photo":"5",
+		"title":"Fitflop",
+		"script":"活動網站",
+        "url": "http://event.elle.com.tw/event/2014/fitflop01/"
+    },
+	{
+		"photo":"6",
+		"title":"adidas",
+		"script":"廣編設計",
+        "url": "http://www.elle.com.tw/fashion/fashion_focus/adidas09"
+    },
+    {
+		"photo":"7",
+		"title":"Lauder",
+		"script":"My cover活動",
+        "url": "http://event.elle.com.tw/event/2014/mycover/"
+    },
+    {
+		"photo":"8",
+		"title":"GUCCI",
+		"script":"經典竹節包",
+        "url": "http://event.elle.com.tw/event/2013/gucci10/"
+    },
+    {
+		"photo":"9",
+		"title":"LUX",
+		"script":"極致護髮油",
+        "url": "http://www.elle.com.tw/beauty/beauty_focus/lux10"
+    },
+    {
+		"photo":"10",
+		"title":"CHANEL",
+		"script":"經典小外套",
+        "url": ""
+    },
+    {
+		"photo":"11",
+		"title":"KARL",
+		"script":"卡爾香水",
+        "url": "http://event.elle.com.tw/event/2014/karl05/"
+    },
+    {
+		"photo":"12",
+		"title":"ELLE",
+		"script":"聖誕專案",
+        "url": "http://event.elle.com.tw/event/2013/xmas11/"
+    },
+    {
+		"photo":"13",
+		"title":"BENSIMON",
+		"script":"法國輕時尚帆布鞋",
+        "url": "http://www.elle.com.tw/fashion/fashion_focus/bensimon201501"
+    },
+    {
+		"photo":"14",
+		"title":"VOGUE",
+		"script":"VOGUE ANGLE活動",
+        "url": "http://www.vogue.com.tw/fashion/special/0029/index.asp"
+    },
+    {
+		"photo":"16",
+		"title":"ELLE",
+		"script":"巨星媽咪 俏寶貝",
+        "url": "http://event.elle.com.tw/event/2014/ellemommy/"
+    },
+    {
+		"photo":"15",
+		"title":"JMD",
+		"script":"網站製作",
+        "url": " http://www.jmdparty.com/"
+    }
+]
