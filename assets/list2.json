@@ -1,5 +1,11 @@
  [
     {
+        "photo": "30",
+        "title": "DAISHO|秘傳日式燒肉醬",
+        "script": "Japn DAISHO",
+        "link": "https://tw-img.vpon.com/img/campaigns/2022_DAISHO/"
+    },
+    {
         "photo": "29",
         "title": "千成堂 香辣酥脆開心果",
         "script": "Japn SENNARIDO",
@@ -15,7 +21,7 @@
         "photo": "27",
         "title": "Taiwan Tatler ｘ BMW 帶您一覽現場活動照片",
         "script": "Taiwan Tatler、BMW",
-        "link": "https://wayne656360.github.io/website/demo/bmw/web/"
+        "link": "http://www.waynedesign.url.tw/demo/bmw/web/"
     },
     {
         "photo": "26",
