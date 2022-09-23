@@ -36,56 +36,7 @@
 
  jQuery(document).ready(function($) {
 
-     var enter = document.querySelector('#enter');
-     var submit_btn = document.getElementById('submit_btn');
-
-     enter.addEventListener('click', function(e) {
-
-         if ($('#name').val() == '') {
-             $('#name').focus();
-             alert('請輸入您的姓名!!');
-             return false;
-         }
-
-         /*pattern = /^[\u4e00-\u9fa5]{2,4}$/;
-         if (!pattern.test($('#name').val())) {
-             alert('請輸入正確的中文姓名!!');
-             $('#name').focus();
-             return false;
-         }*/
-
-         if ($('#cellphone').val() == '') {
-             alert('請輸入您的行動電話!!');
-             $('#cellphone').focus();
-             return false;
-         }
-         pattern = /^(09)[0-9]{8}$/;
-         if (!pattern.test($('#cellphone').val())) {
-             alert('請輸入您正確的行動電話!!');
-             $('#cellphone').focus();
-             return false;
-         }
-
-         if ($('#email').val() == '') {
-             alert('請輸入您的Email!!');
-             $('#email').focus();
-             return false;
-         }
-         pattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-         if (!pattern.test($('#email').val())) {
-             alert('請輸入您正確的Email!!');
-             $('#email').focus();
-             return false;
-         }
-         if ($('#message').val() == '') {
-             alert('請輸入您的內容!!');
-             $('#message').focus();
-             return false;
-         }
-
-         submit_btn.click();
-     });
-
+     
 
      $(".scroll").click(function(event) {
          event.preventDefault();
