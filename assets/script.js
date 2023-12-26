@@ -134,21 +134,27 @@
 
      /******   wheather ******/
      const COUNTER = 0
-            const apiURL = 'https://opendata.cwb.gov.tw/fileapi/v1/opendataapi/F-D0047-061?Authorization=CWB-D6AB4D2D-7D41-4BEE-9D75-1D9EF28264F2&format=JSON';
+            const apiURL = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-061?Authorization=CWB-D6AB4D2D-7D41-4BEE-9D75-1D9EF28264F2&format=JSON';
+    // 設置亂數規則
+    const areaCOUNTER = Math.floor(Math.random() * 11);// 回傳 0~11   
             $.ajax({
                 type: "GET",
                 url: apiURL,
                 dataType: "json",
                 success: function (response) {
-                    var city = response.cwbopendata.dataset.locations.locationsName
-                    var area = response.cwbopendata.dataset.locations.location[3].locationName
-                    var wheaterEle = response.cwbopendata.dataset.locations.location[3].weatherElement[9].time[0].elementValue[1].value
-                    var rain = response.cwbopendata.dataset.locations.location[3].weatherElement[3].time[0].elementValue.value
+                    var city = response.records.locations[0].locationsName
+                    var area = response.records.locations[0].location[areaCOUNTER].locationName
+                    var T = response.records.locations[0].location[areaCOUNTER].weatherElement[3].time[0].elementValue[0].value
+                    var rain = response.records.locations[0].location[areaCOUNTER].weatherElement[7].time[0].elementValue[0].value
+                    var wheaterEle = response.records.locations[0].location[areaCOUNTER].weatherElement[1].time[0].elementValue[1].value
+                    console.log(response)
                     console.log(city)
+                    console.log(areaCOUNTER)
                     console.log(area)
+                    console.log(T)
                     console.log(rain)
-                    var COUNTER = response.cwbopendata.dataset.locations.location[3].weatherElement[0].time[0].elementValue.value
-                    COUNTEReasing(COUNTER);
+                    console.log(wheaterEle)
+                    COUNTEReasing(T);
                     $('.city').text(city);
                     $('.area').text(area);
                     var svgSrc = "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" + wheaterEle + ".svg"
