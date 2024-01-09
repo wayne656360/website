@@ -157,7 +157,7 @@
                     COUNTEReasing(T);
                     $('.city').text(city);
                     $('.area').text(area);
-                    var svgSrc = "https://www.cwb.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" + wheaterEle + ".svg"
+                    var svgSrc = "https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/" + wheaterEle + ".svg"
                     $('.wheaterEle').attr("src",svgSrc);
                     $('.rain').text(rain);
                 },
