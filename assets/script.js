@@ -95,7 +95,14 @@
              html += "<div class=\"caption\">";
              html += "<h3>" + data2[i].title + "</h3>";
              html += "<h4>" + data2[i].script + "</h4>";
-             html += "<a href=\"" + data2[i].link + "\"><p>Link to Event</p><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" class=\"ProjectCoverNeue-icon-vNS\"><path d=\"M8.5 3.5c-5 0-8 5-8 5s3 5 8 5 8-5 8-5-3-5-8-5zm0 7c-1.105 0-2-.896-2-2 0-1.106.895-2 2-2 1.104 0 2 .894 2 2 0 1.104-.896 2-2 2z\"></path></svg></a>";
+             
+             if (typeof(data2[i].prototype) != 'undefined'){
+                html += "<div class=\"twoLink\"><a href=\"" + data2[i].prototype + "\"><p>Link to Figma</p><img src=\"./images/figma_icon.png\" width=\"16\" height=\"16\" style=\"filter: brightness(0.3);\"></a><a href=\"" + data2[i].link + "\"><p>Link to Event</p><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" class=\"ProjectCoverNeue-icon-vNS\"><path d=\"M8.5 3.5c-5 0-8 5-8 5s3 5 8 5 8-5 8-5-3-5-8-5zm0 7c-1.105 0-2-.896-2-2 0-1.106.895-2 2-2 1.104 0 2 .894 2 2 0 1.104-.896 2-2 2z\"></path></svg></a></div>";
+                
+             }else{
+                html += "<a href=\"" + data2[i].link + "\"><p>Link to Event</p><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" class=\"ProjectCoverNeue-icon-vNS\"><path d=\"M8.5 3.5c-5 0-8 5-8 5s3 5 8 5 8-5 8-5-3-5-8-5zm0 7c-1.105 0-2-.896-2-2 0-1.106.895-2 2-2 1.104 0 2 .894 2 2 0 1.104-.896 2-2 2z\"></path></svg></a>";
+             }
+             
              html += "</div></div></div>"
              $("#design2").html(html);
          }
@@ -113,6 +120,7 @@
      $.getJSON("assets/list2.json", function(data2) {
          json2 = data2;
          show2(json2);
+         
          //listELLE();
 
      });
