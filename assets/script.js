@@ -142,25 +142,24 @@
 
      /******   wheather ******/
      const COUNTER = 0
-            const apiURL = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-061?Authorization=CWB-D6AB4D2D-7D41-4BEE-9D75-1D9EF28264F2&format=JSON';
+     const apiURL = 'https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-061?Authorization=CWB-D6AB4D2D-7D41-4BEE-9D75-1D9EF28264F2&format=JSON&LocationName=%E4%B8%AD%E5%B1%B1%E5%8D%80,%E4%BF%A1%E7%BE%A9%E5%8D%80,%E6%9D%BE%E5%B1%B1%E5%8D%80,%E5%A4%A7%E5%AE%89%E5%8D%80,';
     // 設置亂數規則
-    const areaCOUNTER = Math.floor(Math.random() * 11);// 回傳 0~11   
+    const areaCOUNTER = Math.floor(Math.random() * 4);// 回傳 0~11 
             $.ajax({
                 type: "GET",
                 url: apiURL,
                 dataType: "json",
                 success: function (response) {
-                    var city = response.records.locations[0].locationsName
-                    var area = response.records.locations[0].location[areaCOUNTER].locationName
-                    var T = response.records.locations[0].location[areaCOUNTER].weatherElement[3].time[0].elementValue[0].value
-                    var rain = response.records.locations[0].location[areaCOUNTER].weatherElement[7].time[0].elementValue[0].value
-                    var wheaterEle = response.records.locations[0].location[areaCOUNTER].weatherElement[1].time[0].elementValue[1].value
-                    console.log(response)
+                    var city = response.records.Locations[0].LocationsName
                     console.log(city)
+                    var area = response.records.Locations[0].Location[areaCOUNTER].LocationName
                     console.log(areaCOUNTER)
                     console.log(area)
+                    var T = response.records.Locations[0].Location[areaCOUNTER].WeatherElement[0].Time[5].ElementValue[0].Temperature
                     console.log(T)
+                    var rain = response.records.Locations[0].Location[areaCOUNTER].WeatherElement[7].Time[1].ElementValue[0].ProbabilityOfPrecipitation
                     console.log(rain)
+                    var wheaterEle = response.records.Locations[0].Location[areaCOUNTER].WeatherElement[8].Time[1].ElementValue[0].WeatherCode
                     console.log(wheaterEle)
                     COUNTEReasing(T);
                     $('.city').text(city);
