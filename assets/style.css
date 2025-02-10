@@ -235,7 +235,7 @@ p {
 
 /*gallery*/
 .items-wrap2 {
-    padding: 0;
+    padding: 15% 0 0 0;
 }
 
 .eventTittle {
@@ -243,6 +243,7 @@ p {
     color: #141414;
     line-height: 40px;
     text-align: center;
+    margin: auto;
 }
 
 .list {

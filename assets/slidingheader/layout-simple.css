@@ -76,7 +76,7 @@
 	bottom: 0;
 	width:80px;
 	display:block;
-	font:400 0.25em Roboto,Arial,Helvetica;padding:0.2em 0;color:#CCC;
+	font:400 .8em Roboto,Arial,Helvetica;padding:0.2em 0;color:#CCC;
 }
 
 .trigger:hover span {;color:#fff;}
@@ -116,7 +116,7 @@
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	padding: 15% 0 0;
+	padding: 0;
 }
 
 .items-wrap::after {
